@@ -1,0 +1,24 @@
+<div class="section">
+  <h5>{{"video.heading" | translate}}</h5>
+  <div class="checkbox">
+    <label>
+      <input name="video-autoplay" type="checkbox" ng-model="video.autoplay"> {{"video.autoplay.label" | translate}}
+    </label>
+  </div>
+  <div class="form-group">
+    <label>{{"video.volume.label" | translate}}</label>
+    <div>
+      <slider orientation="horizontal" handle="round" ng-model="video.volume" min="0" step="1" max="100"></slider>
+    </div>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input name="video-loop" type="checkbox" ng-model="video.loop"> {{"video.loop.label" | translate}}
+    </label>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input name="video-autohide" type="checkbox" ng-model="video.autohide"> {{"video.autohide.label" | translate}}
+    </label>
+  </div>
+</div>

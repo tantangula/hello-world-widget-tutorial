@@ -1,0 +1,54 @@
+{
+  "name": "widget-settings-ui-components",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Rise-Vision/widget-settings-ui-components",
+  "authors": [
+    "Rise Vision"
+  ],
+  "description": "Common components shared across Rise Vision widget settings UI",
+  "keywords": [
+    "rise-vision",
+    "settings",
+    "widget",
+    "ui",
+    "components"
+  ],
+  "license": "GPLv3",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "test"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.18",
+    "angular-mocks": "1.2.18",
+    "q": "1.0.1",
+    "jquery": "1.11.0",
+    "sinon": "~1.10.2"
+  },
+  "dependencies": {
+    "angular": "1.2.18",
+    "angular-bootstrap-slider": "~0.0.6",
+    "common-style": "https://github.com/Rise-Vision/common-style.git#1.1.4",
+    "component-storage-selector": "https://github.com/Rise-Vision/component-storage-selector.git",
+    "bootstrap-sass-official": "~3.2.0",
+    "angular-bootstrap": "0.11.0",
+    "bootstrap-form-components": "https://github.com/Rise-Vision/bootstrap-form-components.git",
+    "spectrum": "https://github.com/Rise-Vision/spectrum.git",
+    "rv-common-i18n": "https://github.com/Rise-Vision/common-i18n.git"
+  },
+  "resolutions": {
+    "common-style": "1.1.4"
+  },
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.0",
+    "commit": "2a1f618c5e3e0bf22c3d2716d490785614d6f670"
+  },
+  "_source": "https://github.com/Rise-Vision/widget-settings-ui-components.git",
+  "_target": "0.1.0",
+  "_originalSource": "https://github.com/Rise-Vision/widget-settings-ui-components.git"
+}

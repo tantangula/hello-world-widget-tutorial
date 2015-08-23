@@ -1,0 +1,9 @@
+.panel-body {
+	background-color: $panel-body-bg;
+}
+
+.panel-default {
+	> .panel-heading {
+		font-weight: $panel-default-font-weight;
+	}
+}

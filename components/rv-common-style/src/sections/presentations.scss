@@ -1,0 +1,219 @@
+.ph-block {
+  position: absolute;
+  border: 1px solid $white;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0px 0px 56px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: inset 0px 0px 56px 0px rgba(0,0,0,0.15);
+  box-shadow: inset 0px 0px 56px 0px rgba(0,0,0,0.15);
+  .icon-nav {
+    position: absolute;
+    top: 50%;
+  }
+  img {
+    width: 100%;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border:2px solid rgba(0,0,0,0.5);
+  }
+  &:after {
+    -webkit-transition: all 1s; /* Safari 3.1 to 6.0 */
+    transition: all 1s;
+    background-color: rgba(20,20,20,0.5);
+    content: 'Edit';
+    color: #FFF;
+    line-height: 40px;
+    text-align: center;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+  }
+  &:hover {
+    border-color: $rise-green;
+    &:after {
+      opacity:1;
+    }
+  }
+  .ph-menu {
+    z-index: 90;
+    padding: 10px;
+  }
+  &.edit-mode {
+    &:after {
+      opacity:1;
+      content: 'Editing';
+    }
+  }
+}
+
+.presentation-toolbar {
+  z-index: 1090;
+  width: calc(100% - 320px);
+  right: 0;
+  background-color: rgba(20,20,20,0.8);
+  position: absolute;
+  padding: 15px;
+  -webkit-transition: all 0.2s; /* Safari 3.1 to 6.0 */
+    transition: all 0.2s;
+  h3 {
+    margin: 0;
+    line-height: 33px;
+    color: #FFF;
+    margin-right: 10px;
+  }
+  &.full {
+    width: 100%;
+  }
+}
+
+.ph-overlay {
+    background-color: $gray;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+    -webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+  &.active {
+    opacity: 0.8;
+  }
+}
+
+.row.sm-gutter {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.row.sm-gutter [class*='col-']:not(:first-child),
+.row.sm-gutter [class*='col-']:not(:last-child) {
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.ph-transform {
+  .input-group {
+    .input-group-addon {
+      padding: 0 4px;
+      font-size: 12px;
+      &:first-child {
+        width: 50px;
+      }
+      &:last-child {
+        font-size:11px;
+      }
+    }
+    input {
+    }
+  }    
+}
+
+.row-green {
+  background-color: lighten($rise-green, 43%);
+}
+
+.row-danger {
+  background-color: lighten($brand-danger, 40%);
+}
+
+.editor-bg {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiI+PC9yZWN0Pgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+");
+  overflow: auto;
+  overflow: scrollable;
+  height: calc(100vh - 80px);
+  position: relative;
+  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Safari 3.1 to 6.0 */
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &.active {
+    margin-left: 320px;
+  }
+  &.full {
+    margin-left: 0;
+  }
+}
+
+.artboard-presentation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1080;
+  .ph-content {
+    position: absolute;
+  }
+}
+
+.artboard-sidebar {
+  position: absolute;
+  overflow: auto;
+  overflow: scrollable;
+  height: calc(100vh - 91px);
+  z-index: 1050;
+  width: 320px;
+  background-color: $lighter-gray;
+  opacity: 0;
+  -webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+  transition: all 0.5s;
+  transform: translate(320px, 0px);
+  -webkit-transform: translate(320px, 0px);
+  &.active {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+  }
+  &.move {
+    transform: translate(-320px, 0px);
+    -webkit-transform: translate(-320px, 0px);
+  }
+}
+
+.artboard-sidebar::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.artboard-sidebar::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+.artboard-sidebar::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+.artboard-sidebar::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid $lighter-gray; /* should match background, can't be transparent */
+  background-color: rgba(50, 50, 50, .5);
+}
+
+.artboard-sidebar::-webkit-scrollbar-track { 
+  background-color: $lighter-gray; 
+  border-radius: 2px; 
+}
+
+.editor-bg::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.editor-bg::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+.editor-bg::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+.editor-bg::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid $lighter-gray; /* should match background, can't be transparent */
+  background-color: rgba(50, 50, 50, .5);
+}
+
+.editor-bg::-webkit-scrollbar-track { 
+  background-color: $lighter-gray; 
+  border-radius: 2px; 
+}

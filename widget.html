@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Text Widget</title>
+
+    <!-- build:css css/widget.min.css -->
+    <link rel="stylesheet" href="components/common-style/dist/css/alignment.min.css">
+    <link rel="stylesheet" href="components/bootstrap-form-components/dist/css/all.min.css">
+    <!-- endbuild -->
+
+    <style>
+      body {
+        margin: 0;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+		<!--Build your widget in here, and it will show up inside your widget boundary-->
+		<h2 id="message"></h2>
+    </div>
+
+    <script src="//rvashow2.appspot.com/gadgets/gadgets.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- build:js js/widget.min.js -->
+    <script src="components/widget-common/dist/common.js"></script>
+    <script src="widget/hello-world.js"></script>
+    <script src="widget/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

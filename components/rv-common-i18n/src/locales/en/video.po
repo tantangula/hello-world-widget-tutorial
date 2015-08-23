@@ -1,0 +1,15 @@
+msgid "autoplay.label"
+msgstr "Auto Play"
+
+msgid "heading"
+msgstr "Video"
+
+msgid "loop.label"
+msgstr "Loop"
+
+msgid "settings"
+msgstr "Video Settings"
+
+msgid "volume.label"
+msgstr "Volume"
+

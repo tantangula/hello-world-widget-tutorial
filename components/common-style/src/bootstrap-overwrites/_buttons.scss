@@ -1,0 +1,20 @@
+$btn-default-color: #444;
+
+.btn {
+  outline:0;
+  border-radius: 2px;
+
+  .badge {
+    background: $btn-default-bg;
+    color: $btn-default-color;
+  }
+}
+
+
+.btn-default {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border, $btn-default-border-disabled, #fff, #d5d5d5);
+}
+
+.btn-lg {
+	font-size: 16px;
+}

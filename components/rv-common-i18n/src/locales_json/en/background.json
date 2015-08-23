@@ -1,0 +1,10 @@
+{
+  "choice": "Use Image",
+  "color": {
+    "label": "Color"
+  },
+  "heading": "Background",
+  "image": {
+    "scale": "Scale To Fit"
+  }
+}

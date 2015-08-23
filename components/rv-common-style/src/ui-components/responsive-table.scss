@@ -1,0 +1,228 @@
+$table-padding: 10px 15px;
+
+.table-2 {
+  width: 100%;
+  > thead > tr > th {
+    border-bottom: 1px solid $light-gray;
+    color: $gray;
+    padding: $table-padding;
+    white-space: nowrap;
+    a {
+      color: $gray;
+    }
+  }
+  > tbody > tr > td {
+    border-bottom: 1px solid $lighter-gray;
+    color: $gray;
+    padding: $table-padding;
+    vertical-align: top;
+    strong {
+      font-weight: 500;
+    }
+    a {
+      color: $gray;
+      display: block;
+    }
+  }
+  > tbody > tr:hover {
+    &.clickable-row {
+      cursor: pointer;
+      td {color: $rise-blue;}    
+    }
+    > td a {
+      color: $rise-blue;
+    }
+    > td a.non-clickable-file {
+      color: $gray;
+    }
+  }
+  .folder,.file {
+    &:before {
+      font-family: FontAwesome;
+    }
+  }
+  .back-btn .folder {
+    &:before {content:'\f07c'; color: $rise-green;}
+  }
+  .folder {
+    &:before {content:'\f07b'; color: $rise-green; margin-right: 10px;}
+  }
+  .file {
+    &:before {content:'\f15b'; color: #d4d4d4;}
+  }
+  .sub-folder {
+    margin-left: 22px;
+    position: relative;
+    &:after {
+      content:'';
+      width: 15px;
+      height: 6px;
+      display: block;
+      position: absolute;
+      top: 4px;
+      left: -20px;
+      border-bottom: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+    }
+  }
+}
+
+.table-actions {
+  white-space: nowrap;
+}
+
+
+.table-middle {
+  > tbody > tr > td {
+    vertical-align: middle;
+  }
+}
+
+
+.table-selector {
+  > thead > tr {
+    th {
+        label {
+          margin: 0;
+        }
+        input[type=checkbox] {
+          display:none; 
+        }
+        input[type=checkbox] + label:before {
+          font-family: FontAwesome;
+          margin-right: 10px;
+          display: inline-block;
+          vertical-align: middle;
+          color: #d4d4d4;
+          font-size: 16px;
+          width: 16px;
+          text-align: center;
+          content:'\f096';
+        }
+        input[type=checkbox]:checked + label:before {
+          content: '\f14a';
+        }
+      }
+    }
+
+  > tbody > tr {
+    td {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      vertical-align: middle;
+      &:first-child:before {
+        font-family: FontAwesome;
+        font-style: normal;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        color: #d4d4d4;
+        font-size: 16px;
+        width: 16px;
+        height: 18px;
+        text-align: center;
+      }
+    }
+    &.back-btn {
+      td {
+        &:first-child:before {
+          content: '\f060' !important;
+        }
+      }
+    }
+    &.no-select-row {
+      td {
+        &:first-child:before {
+          content: '' !important;
+        }
+      }
+    }
+    &.active {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      &:hover {
+        td {
+          background: lighten($rise-green, 5%);
+          color: #FFF;
+
+        }
+      }
+      td {
+        background: lighten($rise-green, 5%);
+        color: #FFF;
+         a {
+            color: #FFF;
+          }
+          .text-muted {
+            color: #FFF;
+          }
+
+        .folder {
+          &:before {color:#FFF;}
+        }
+        &:first-child:before {
+          color: #FFF;
+        }
+      }
+    }
+  }
+  &.single-selector {
+    > tbody > tr {
+      td:first-child {
+        &:before {
+          content:'\f10c';
+        }
+      }
+      &.active { 
+        td {
+          &:first-child:before {content: '\f192';}
+        }
+      }
+    }
+  }
+  &.multiple-selector {
+    > tbody > tr {
+      td:first-child {
+        &:before {
+          content:'\f096';
+        }
+      }
+      &.active { 
+        td {
+          &:first-child:before {content: '\f14a';}
+        }
+      }
+    }
+  }
+}
+
+.table-stack {
+  @media (max-width: 768px) {
+    > thead > tr > th {
+      display: none;
+    }
+    > tbody > tr {
+      border-bottom: 1px solid $lighter-gray;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:hover {
+        background: #f5f5f5;
+      }
+    } 
+    > tbody > tr > td {
+      display: inline-block;
+      text-align: left;
+      border: none;
+    }
+  }
+}

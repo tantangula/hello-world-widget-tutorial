@@ -1,0 +1,12 @@
+msgid "choice"
+msgstr "Use Image"
+
+msgid "color.label"
+msgstr "Color"
+
+msgid "heading"
+msgstr "Background"
+
+msgid "image.scale"
+msgstr "Scale To Fit"
+

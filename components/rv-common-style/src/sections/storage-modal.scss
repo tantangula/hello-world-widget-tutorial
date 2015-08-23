@@ -1,0 +1,230 @@
+.storage-modal {
+  padding:  15px;
+  .scrollable-list {
+    max-height: calc(100vh - 140px);
+  }
+  h3 {
+    margin-top: 0;
+  }
+  .table-2 {
+  > tbody > tr > td {
+    strong {font-weight: 500}
+    .fa {font-size: 20px; line-height: 20px; vertical-align: top;}
+    span {display: inline-block;}
+  }
+  > tbody > tr > td:first-child {
+      input {display: inline-block;}
+      .fa {margin-right: 3px;}
+      span a {
+        @include ellipsis(1,large);
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+      }
+      @media (max-width: 480px) {
+        span a {
+          @include ellipsis(1,medium);        
+        }
+      }
+    }
+  }
+
+.folder {
+  td {}
+}
+
+tr.blocked-file {
+  >td {
+  background: #f7f7f7;
+  cursor: pointer;
+  position: relative;
+    .callout {
+      top:45px;
+      left: 0;
+    }
+  }
+}
+
+  tr {
+    td {
+      a {color: $gray}
+    }
+  }
+
+.icon-nav {
+  padding-bottom: 1px;
+}
+
+.selector-header {
+  margin-bottom: 10px;
+  margin-top: 15px;
+  p {
+    line-height: 16px;
+    margin: 0;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    &:first-child {display:block;}
+  }
+  @media (max-width: 768px) {
+    .icon-nav {
+      .btn {margin-left: -4px;}
+    }
+  }
+}
+
+  /* ==========================================================================
+     Buttons
+     ========================================================================== */
+  .commands {
+    position: relative;
+  }
+
+  .storage-used-info {
+    font-size: 10px;
+    text-align: right;
+    float: right;
+  }
+
+  .current-folder-icon .fa::before {
+    color: $rise-green;
+  }
+
+  #store-modal {
+    .overlay {
+    z-index: $storage-store-overlay-zindex;
+    background-color: #ffffff;
+    }
+  }
+
+  /* ==========================================================================
+     Uploader
+     ========================================================================== */
+  .inline-progress {
+      margin-bottom: 0px;
+  }
+
+  .inline-cancel {
+    float: right; 
+    width: auto; 
+    padding-left: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  tbody tr:first-child td {
+    border-top: none;
+  }
+
+  .panel table {
+    margin-bottom: 0px !important;
+  }
+
+  .panel-heading {
+    cursor: pointer;
+  }
+
+  /* ==========================================================================
+  Thumbnail View
+  ========================================================================== */
+  /**
+   * Single-column layout at mobile resolutions.
+   */
+  .thumbnails {
+    display: none;
+    cursor: pointer;
+  }
+
+  /* Clearfix */
+  .thumbnails:after {
+    clear: both;
+    display: block;
+    content: "";
+  }
+
+  .thumbnail {
+    border: none;
+  }
+  .thumbnail .caption {
+    font-size: 12px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .thumbnail:hover, .thumbnail.active {
+    background-color: #f5f5f5;
+  }
+
+  .thumbnail.active:hover {
+    background-color: #e8e8e8;
+  }
+
+  /* Media queries
+  ========================================================================== */
+  /**
+   * Three-column layout at tablet resolutions.
+   */
+  @media (min-width: 768px) {
+    .thumbnail {
+      /* Positioning */
+      float: left;
+      /* Display & Box Model */
+      width: 33.33333%;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .thumbnail:nth-child(3n+1) {
+      clear: left;
+    }
+  }
+
+  /**
+   * Six-column layout at desktop resolutions.
+   */
+  @media (min-width: 992px) {
+    .thumbnail {
+      width: 16.66667%;
+    }
+    .thumbnail:nth-child(3n+1) {
+      clear: none;
+    }
+    .thumbnail:nth-child(6n) {
+      padding-right: 0;
+    }
+    .thumbnail:nth-child(6n+1) {
+      /* Positioning */
+      clear: left;
+      /* Display & Box Model */
+      padding-left: 0;
+    }
+  }
+  
+  .current-folder {
+    line-height: 43px;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+  .non-clickable-file {
+    cursor: default;
+    text-decoration: none;
+  }
+}
+
+
+
+tr.blocked-file {
+  position: relative;
+  >td {
+  background: #f7f7f7;
+  cursor: pointer;
+  position: relative;
+    .callout {
+      top:35px;
+      left: 10px;
+    }
+  }
+}

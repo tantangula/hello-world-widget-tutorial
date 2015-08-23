@@ -1,0 +1,71 @@
+@mixin ellipsis($line-number,$line-width) {
+  max-height: 
+    ($line-number * 20px);
+  @if $line-width == small {
+    width: 120px
+  }
+  @if $line-width == medium {
+    width: 240px
+  } 
+  @if $line-width == large {
+    width: 480px
+  }
+  @if $line-width == full {
+    width: 100%
+  }  
+}
+.ellipsis {
+  overflow: hidden;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.ellipsis-md {
+  @include ellipsis(2,full);
+}
+.ellipsis-xs {
+  @include ellipsis(1,small);
+}
+
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 40px;
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 10px 14px;
+    pointer-events: none;
+    &::before {
+      color: #CCC;
+    }
+}
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 40px;
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+.highlighted {
+  background: #FFFFE0;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+}
+
+%vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+

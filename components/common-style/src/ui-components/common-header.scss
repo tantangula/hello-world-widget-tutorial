@@ -1,0 +1,46 @@
+.double-margin {
+	margin-bottom: 40px !important;
+}
+
+.sub-company-alert {
+	width: 100%;
+	line-height: 24px;
+	bottom: -24px;
+	background-color: lighten($brand-danger, 25%);
+	color: #000;
+	padding: 0 20px;
+	border-bottom: 1px solid lighten($brand-danger, 15%);
+	text-align: center;
+	display: inline-block;
+}
+
+.sub-company-alert .link-button {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.authorization-modal {
+	text-align: center;
+
+	.profile-img {
+		width: 72px;
+		height: 72px;
+		-webkit-border-radius: 72px;
+			 -moz-border-radius: 72px;
+						border-radius: 72px;
+	}
+
+	p,
+	.btn { margin-top: 40px; }
+}
+
+.navbar-header {
+	.dropdown-menu {
+		.fa { font-size: 20px !important; }
+	}
+
+	.dropdown-header .fa {
+		width: 40px;
+		&:before { font-size: 20px !important; }
+	}
+}

@@ -1,0 +1,45 @@
+.box-list-container {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: $border-radius-small;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.box-list {
+  color: #333;
+  margin-top: 0;
+  padding: 15px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  &:hover,
+  &:active { background-color: #fafafa; }
+
+  .title {
+    margin: 0;
+    line-height: 1.5;
+    @extend .ellipsed;
+  }
+
+  p {
+    @extend .ellipsed;
+    font-size: 85%;
+    line-height: 1.1;
+    margin: 5px 0 0 0;
+  }
+
+  .meta { color: $text-muted; }
+
+  .box-list-body {
+    padding-right: 40px;
+    @extend .ellipsed;
+  }
+
+  .box-list-aside {
+    float: right;
+    @extend .ellipsed;
+  }
+}

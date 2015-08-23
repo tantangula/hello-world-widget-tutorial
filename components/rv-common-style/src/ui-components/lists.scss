@@ -1,0 +1,105 @@
+/* Modal scrollable list
+   ========================================================================== */
+.scrollable-list {
+  overflow: auto;
+  overflow-y: scrollable;
+  cursor: pointer;
+  max-height: calc(100vh - 320px);
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  min-height: 240px;
+}
+
+.content-box {
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollable-list::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.scrollable-list::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+.scrollable-list::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+.scrollable-list::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid $lighter-gray; /* should match background, can't be transparent */
+    background-color: rgba(50, 50, 50, .5);
+}
+
+.scrollable-list::-webkit-scrollbar-track { 
+    background-color: $lighter-gray; 
+    border-radius: 2px; 
+} 
+
+.content-box {
+  .scrollable-list {
+    border: none;
+  }
+}
+
+/* List-Group
+   ========================================================================== */
+
+.list-group {
+  margin-bottom: 0;
+}
+
+.list-group-item {
+  background-color: none;
+  border:none;
+  border-bottom: 1px solid $lighter-gray;
+}
+
+/* Box list
+   ========================================================================== */
+
+.box-list-container {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: $border-radius-small;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.box-list {
+  color: #333;
+  margin-top: 0;
+  padding: 15px;
+  &:not(:last-child) {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  &:hover,
+  &:active { background-color: #fafafa; }
+
+  .title {
+    margin: 0;
+    line-height: 1.5;
+    @extend .ellipsed;
+  }
+
+  p {
+    @extend .ellipsed;
+    font-size: 85%;
+    line-height: 1.1;
+    margin: 5px 0 0 0;
+  }
+
+  .meta { color: $text-muted; }
+
+  .box-list-body {
+    padding-right: 40px;
+    @extend .ellipsed;
+  }
+
+  .box-list-aside {
+    float: right;
+    @extend .ellipsed;
+  }
+}

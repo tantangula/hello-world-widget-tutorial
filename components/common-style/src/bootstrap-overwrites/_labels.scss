@@ -1,0 +1,7 @@
+.label-primary {
+  @include label-variant($label-primary-bg, $label-primary-color-hover);
+}
+
+.label-success {
+  @include label-variant($label-success-bg, $label-success-color-hover);
+}

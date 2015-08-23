@@ -1,0 +1,123 @@
+<!--
+
+The settings interface is built using AngularJS. To gain a better understanding of how the whole widget system works, you can
+start your research by looking into Angular, but if you just need to take in some user input and pass it to you widget, you can
+do the following...
+
+	Add the following inside of the form tag:
+
+		<input type="text" ng-model="settings.additionalParams.yourVariableName"></input>
+
+	Whatever you type instead of "yourVariableName" will become the name of the variable that is stored inside of the the Angular
+	model. There is no need to declare it anywhere else.*
+
+	Once the input is added, the user can input a value and click the Rise Vision UI's "Save" button to save the value into the
+	Angular model. Then, once the value is in the model, it can be pulled out and used in the widget using some Google Gadget Cloud magic
+	I don't understand yet.
+
+	To see where the data comes out on the other side, you can look at "main.js" in the /src/widget folder for
+	more information on where the settings data is being pulled into the widget, and "hello-world.js" in the same folder for more
+	information on how to actually use the settings data once it's been pulled in.
+
+
+
+
+	*While you don't need to formally declare model variables, you can give them a default value by adding them into...
+
+		angular.module("risevision.widget.hello.world.settings")
+			.value("defaultSettings", {
+				"additionalParams": {
+					"yourVariableName": "Your default value."
+				}
+			});
+
+	Look at "ctr-hello-world.js" in the /src/settings folder to see how the default value for "settings.additionalParams.message" is set.
+
+-->
+
+<!--
+
+To give your settings interface the same look as the other Rise Vision widgets, leave most of this code alone, and skip down the form tag
+to add your inputs.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello World Settings</title>
+
+  <!-- build:css css/settings.min.css -->
+  <link rel="stylesheet" href="components/common-style/dist/css/rise.min.css">
+  <link rel="stylesheet" href="components/rv-bootstrap-formhelpers/dist/css/rv-bootstrap-formhelpers.min.css">
+  <link rel="stylesheet" href="components/bootstrap-select/bootstrap-select.min.css">
+  <!-- endbuild -->
+
+  <style>
+    html, body {
+      background-color: transparent;
+    }
+
+    body {
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body ng-app="risevision.widget.hello.world.settings" ng-controller="settingsController">
+  <div class="widget">
+    <div class="overlay"></div>
+    <div class="settings">
+      <div class="settings-center">
+        <div class="wrapper container modal-content" ng-controller="helloWorldSettingsController">
+          <div class="modal-header">
+            <h2 id="settings-title"> Hello World Settings
+              <button type="button" ng-click="closeSettings()" class="close">
+                <span>&times;</span>
+                <span class="sr-only">Close</span>
+              </button>
+            </h2>
+            <div class="sticky-wrapper">
+              <widget-button-toolbar save="saveSettings()" cancel="closeSettings()">
+              </widget-button-toolbar>
+            </div>
+          </div>
+          <div id="settings-alert" class="alert alert-danger" ng-show="onError"></div>
+          <form role="form" name="settingsform">
+			  <!-- Add you settings inside this form tag. Use the message input as an example of how to add a variable
+			  into the Angular model. Just copy and paste the input. Then change "message" to what you want you variable
+			  to be known as in the Angular model. -->
+			  <h4>Message</h4>
+			  <input type="text" ng-model="settings.additionalParams.message"></input>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+
+  <!-- build:js js/settings.min.js -->
+  <script src="components/angular-translate/angular-translate.js"></script>
+  <script src="components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+  <script src="components/rv-common-i18n/dist/i18n.js"></script>
+  <script src="components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+  <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="components/rv-bootstrap-formhelpers/dist/js/rv-bootstrap-formhelpers.js"></script>
+  <script src="components/bootstrap-select/bootstrap-select.min.js"></script>
+  <script src="components/widget-settings-ui-core/dist/widget-settings-ui-core.js"></script>
+  <script src="components/widget-settings-ui-components/dist/js/widget-settings-ui-components.js"></script>
+  <script src="components/widget-settings-ui-components/dist/js/angular/widget-button-toolbar.js"></script>
+  <script src="components/widget-common/dist/common.js"></script>
+  <script src="config/config.js"></script>
+  <script src="settings/settings-app.js"></script>
+  <script src="settings/ctr-hello-world-settings.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:e2egadgets -->
+  <script src="//rvashow2.appspot.com/gadgets/gadgets.min.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

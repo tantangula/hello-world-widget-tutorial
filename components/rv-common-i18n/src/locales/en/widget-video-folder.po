@@ -1,0 +1,18 @@
+msgid "controls"
+msgstr "Show Video Controls"
+
+msgid "feedback.anchor"
+msgstr "here"
+
+msgid "feedback.message"
+msgstr "How can the Video Folder Widget work better for you? Let us know "
+
+msgid "pause.label"
+msgstr "Resume After Pause"
+
+msgid "pause.tooltip"
+msgstr "Number of seconds before a video will resume playing if paused"
+
+msgid "settings"
+msgstr "Video Folder Settings"
+

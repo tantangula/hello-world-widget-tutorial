@@ -1,0 +1,83 @@
+.app-header {
+  @include make-row;
+  margin-top:10px;
+  margin-bottom: 10px;
+  .title-block,.app-title {
+    @include make-sm-column(6);
+    h1 {
+      font-weight: 400;
+      line-height: 38px;
+      margin: 0 5px 0 0;
+      display: inline-block;
+    }
+    .store-status-2 {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 10px;
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }    
+    .store-status {
+      display: inline-block;
+      vertical-align: top;
+      h3 {
+        margin:0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 43px;
+        a {
+          font-weight: bold;
+        }
+      }
+      @media (max-width: 768px) {
+        display: block;
+        h3 {
+          line-height: normal;
+        }
+      }
+    }
+  }
+  .app-title {
+    border-bottom: 1px solid #D6D6D6;
+  }
+
+  .global-actions {
+    text-align: right;
+    .btn {
+      float: right;
+      margin-left: 10px;
+    }
+    @include make-sm-column(6);
+    @media (max-width: 768px) {
+      margin-top: 10px;
+      float:none;
+      .btn {
+        float: none;
+        width: 100%;
+        margin: 0 0 5px;
+      }
+    }
+  }
+
+  .form-group {
+    @include make-sm-column(12);
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.active-folder {
+  .fa:before {
+    color:$rise-green;
+  }
+  span {
+    margin-left: 5px;
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 5px;
+    color: $gray;
+  }
+}
+
+

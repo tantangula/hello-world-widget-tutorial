@@ -1,0 +1,33 @@
+{
+  "name": "widget-common",
+  "version": "0.1.10",
+  "homepage": "https://github.com/Rise-Vision/widget-common",
+  "authors": [
+    "Rise Vision Inc <support@risevision.com>"
+  ],
+  "description": "Common functionality for Widgets not using Angular JS.",
+  "license": "GPL V3",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "test",
+    "tmp"
+  ],
+  "devDependencies": {
+    "web-component-rise-storage": "https://github.com/Rise-Vision/web-component-rise-storage.git#1.0.3"
+  },
+  "dependencies": {
+    "jquery": "1.11.0"
+  },
+  "_release": "0.1.10",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.10",
+    "commit": "8ca659db2476dad2060186d0afacab2e4a07dc38"
+  },
+  "_source": "https://github.com/Rise-Vision/widget-common.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/Rise-Vision/widget-common.git"
+}
